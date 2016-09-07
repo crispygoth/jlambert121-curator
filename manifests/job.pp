@@ -62,6 +62,7 @@ define curator::job (
   $cron_weekday          = '*',
   $cron_hour             = 1,
   $cron_minute           = 10,
+  $cron_user             = undef,
 ){
 
   include ::curator
@@ -289,6 +290,7 @@ define curator::job (
     hour    => $cron_hour,
     minute  => $cron_minute,
     weekday => $cron_weekday,
+    user    => $cron_user,
   }
 
 }
